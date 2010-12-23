@@ -1,0 +1,28 @@
+{
+  "/var/log/messages": {
+    "patterns": {
+        "usb_disconnect": {
+          "pattern": "USB disconnect, address \d+",
+          "case_sensitive": false,
+          "description": "USB device has been disconnected",
+          "context": [5, 5],
+          "spanshot": false
+        }
+    },
+
+    "options": {
+      "notify_on_not_available": true
+    },
+
+    "notifications": {
+      "webhook": {
+        "urls": [ "http://example.foo.bar/hook" ]
+      },
+      "email": {
+        "addresses": [ "example@foo.bar" ]
+      },
+      "stdout": {
+      }
+    }
+  }
+}
