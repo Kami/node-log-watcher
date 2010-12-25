@@ -1,6 +1,6 @@
 var util = require('util');
 
-var optparse = require('./lib/extern/optparse/lib/optparse');
+var optparse = require('optparse');
 
 var LogWatcher = require('./lib/log_watcher').LogWatcher;
 
