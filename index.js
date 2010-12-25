@@ -34,7 +34,7 @@ if (!options.config && !options.print_help) {
 }
 
 if (!options.print_help) {
-  log_watcher = new LogWatcher(options.config);
+  var log_watcher = new LogWatcher(options.config);
   log_watcher.start();
 }
 
