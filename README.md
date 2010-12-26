@@ -11,7 +11,7 @@ In a configuration file you specify which files to watch for changes, match patt
 
 ## Example configuration
 
-   {
+    {
       "/var/log/messages": {
         "patterns": {
             "usb_disconnect": {
@@ -71,7 +71,7 @@ For the available plugin options, view the corresponding plugin source code: `li
 
 # Usage
 
-log_watcher --config <path to the config file>
+    log_watcher --config <path to the config file>
 
 # Reloading configuration without restarting the program
 
