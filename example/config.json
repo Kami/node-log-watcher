@@ -1,28 +1,30 @@
-{
-  "/var/log/messages": {
-    "patterns": {
-        "usb_disconnect": {
-          "pattern": "USB disconnect, address \d+",
-          "case_sensitive": false,
-          "description": "USB device has been disconnected",
-          "context": [5, 5],
-          "spanshot": false
+   {
+      "/var/log/messages": {
+        "patterns": {
+            "usb_disconnect": {
+              "pattern": "USB disconnect, address \\d+",
+              "case_sensitive": false,
+              "description": "USB device has been disconnected"
+            },
+
+            "usb_connect": {
+              "pattern": "new low|full speed USB device",
+              "case_sensitive": false,
+              "description": "USB device has been connected"
+            }
+        },
+
+        "options": {
+          "notify_on_not_available": true
+        },
+
+        "notifications": {
+          "email": {
+            "from": "notifications@foo.bar",
+            "addresses": [ "example@foo.com" ]
+          },
+          "stdout": {
+          }
         }
-    },
-
-    "options": {
-      "notify_on_not_available": true
-    },
-
-    "notifications": {
-      "webhook": {
-        "urls": [ "http://example.foo.bar/hook" ]
-      },
-      "email": {
-        "addresses": [ "example@foo.bar" ]
-      },
-      "stdout": {
       }
     }
-  }
-}
