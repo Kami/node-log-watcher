@@ -1,7 +1,7 @@
 {
   "name": "log-watcher",
   "description": "Watches log files for changes and sends a notification if a pre-defined pattern is detected or a tracked file is deleted.",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": "Tomaz Muraus <tomaz+npm@tomaz.me> http://www.tomaz.me",
   "keywords": [ "watcher", "log", "files", "notification", "alert" ],
   "homepage": "https://github.com/Kami/node-log-watcher",
