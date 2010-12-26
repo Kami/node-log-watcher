@@ -10,7 +10,7 @@ var switches = [
 ];
 
 var parser = new optparse.OptionParser(switches);
-parser.banner = 'Usage: log-watcher.js [options]';
+parser.banner = 'Usage: log-watcher [options]';
 
 var options = {
     config: null,
